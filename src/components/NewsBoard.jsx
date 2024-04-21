@@ -10,7 +10,7 @@ const NewsBoard = ({ category, lang, country }) => {
     setLoading(true);
     setError(null);
 
-    let apikey = 'a744228e78207bfb47d2c696d9375328';
+    let apikey = 'd1b4939d75d0ee8f2a225fbfcee28b4f';
     let url = `https://gnews.io/api/v4/search?q=${category}&lang=${lang}&country=${country}&max=12&apikey=` + apikey;
     
     fetch(url)
