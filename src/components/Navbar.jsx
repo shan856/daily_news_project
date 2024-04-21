@@ -112,7 +112,7 @@ const Navbar = ({ setCategory, setLang, setCountry, category }) => {
         </div>
         
       </div>
-      <div className="dropdown" style={{ marginRight: '10px' }}>
+      <div className="dropdown" style={{  marginLeft:'5px',  marginRight: '10px' }}>
         <button className="btn btn-secondary bg-danger dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
           Language
         </button>
