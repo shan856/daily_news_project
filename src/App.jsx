@@ -5,6 +5,8 @@ import './App.css'
 
 const App = () => {
   const [category, setCategory] = useState('general');
+  const [lang, setLang] = useState('en'); // Default language
+  const [country, setCountry] = useState('in'); // Default country
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -15,12 +17,13 @@ const App = () => {
 
   return (
     <div>
-      <Navbar setCategory={setCategory} />
+      <Navbar setCategory={setCategory} setLang={setLang} setCountry={setCountry} />
       <div className='text-center'>
-        <NewsBoard category={category} />
+        <NewsBoard category={category} lang={lang} country={country} />
       </div>
-    <div className='button-container'> <button onClick={scrollToTop} className="button"> back to top
-    </button></div>
+      <div className='button-container'>
+        <button onClick={scrollToTop} className="button">back to top</button>
+      </div>
     </div>
   );
 };

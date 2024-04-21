@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NewsItem from './NewsItem';
-import Navbar from './Navbar';
 
-const NewsBoard = ({ category }) => {
+const NewsBoard = ({ category, lang, country }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,10 +10,10 @@ const NewsBoard = ({ category }) => {
     setLoading(true);
     setError(null);
 
-    let apikey = 'd63d771354f4f6ae52243518b04a0672';
-    let url = `https://gnews.io/api/v4/search?q=${category}&lang=en&country=in&max=12&apikey=` + apikey;
+    let apikey = 'a744228e78207bfb47d2c696d9375328';
+    let url = `https://gnews.io/api/v4/search?q=${category}&lang=${lang}&country=${country}&max=12&apikey=` + apikey;
     
-        fetch(url)
+    fetch(url)
       .then((res) => {
         if (!res.ok) {
           throw new Error('Network response was not ok');
@@ -30,7 +29,7 @@ const NewsBoard = ({ category }) => {
         setLoading(false);
         console.error('Error fetching data:', error);
       });
-  }, [category]);
+  }, [category, lang, country]);
 
   if (loading) {
     return <div className="text-center">Loading...</div>;

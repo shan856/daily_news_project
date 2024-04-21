@@ -39,12 +39,12 @@ const Navbar = ({ setCategory, setLang, setCountry, category }) => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a
-                href="#general"
-                className={`nav-link border-0 bg-transparent ${category === 'general' ? 'active' : ''}`}
-                onClick={() => handleCategoryChange('general')}
+                href="#business"
+                className={`nav-link border-0 bg-transparent ${category === 'business' ? 'active' : ''}`}
+                onClick={() => handleCategoryChange('business')}
                 style={{ fontWeight: 'bold' }}
               >
-                General
+                Business
               </a>
             </li>
             <li className="nav-item">
@@ -59,12 +59,12 @@ const Navbar = ({ setCategory, setLang, setCountry, category }) => {
             </li>
             <li className="nav-item">
               <a
-                href="#business"
-                className={`nav-link border-0 bg-transparent ${category === 'business' ? 'active' : ''}`}
-                onClick={() => handleCategoryChange('business')}
+                href="#genral"
+                className={`nav-link border-0 bg-transparent ${category === 'general' ? 'active' : ''}`}
+                onClick={() => handleCategoryChange('general')}
                 style={{ fontWeight: 'bold' }}
               >
-                Business
+                General
               </a>
             </li>
             <li className="nav-item">
@@ -113,37 +113,37 @@ const Navbar = ({ setCategory, setLang, setCountry, category }) => {
         
       </div>
       <div className="dropdown" style={{ marginRight: '10px' }}>
-        <button className="btn btn-secondary bg-danger dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          Language
+        <button className="btn btn-secondary dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Lang
         </button>
         <ul className="dropdown-menu mg" aria-labelledby="langDropdown">
-          <li><button href="/#ar"className="dropdown-item" type="button" value="ar" onClick={() => handleLangChange('ar')}>Arabic</button></li>
-          <li><button href="/#zh"className="dropdown-item" type="button" value="zh" onClick={() => handleLangChange('zh')}>Chinese</button></li>
-          <li><button href="/#nl"className="dropdown-item" type="button" value="nl" onClick={() => handleLangChange('nl')}>Dutch</button></li>
-          <li><button href="/#en"className="dropdown-item" type="button" value="en" onClick={() => handleLangChange('en')}>English</button></li>
-          <li><button href="/#fr"className="dropdown-item" type="button" value="fr" onClick={() => handleLangChange('fr')}>French</button></li>
-          <li><button href="/#de"className="dropdown-item" type="button" value="de" onClick={() => handleLangChange('de')}>German</button></li>
-          <li><button href="/#el"className="dropdown-item" type="button" value="el" onClick={() => handleLangChange('el')}>Greek</button></li>
-          <li><button href="/#he"className="dropdown-item" type="button" value="he" onClick={() => handleLangChange('he')}>Hebrew</button></li>
-          <li><button href="/#hi"className="dropdown-item" type="button" value="hi" onClick={() => handleLangChange('hi')}>Hindi</button></li>
-          <li><button href="/#it"className="dropdown-item" type="button" value="it" onClick={() => handleLangChange('it')}>Italian</button></li>
-          <li><button href="/#ja"className="dropdown-item" type="button" value="ja" onClick={() => handleLangChange('ja')}>Japanese</button></li>
-          <li><button href="/#ml"className="dropdown-item" type="button" value="ml" onClick={() => handleLangChange('ml')}>Malayalam</button></li>
-          <li><button href="/#mr"className="dropdown-item" type="button" value="mr" onClick={() => handleLangChange('mr')}>Marathi</button></li>
-          <li><button href="/#no"className="dropdown-item" type="button" value="no" onClick={() => handleLangChange('no')}>Norwegian</button></li>
-          <li><button href="/#pt"className="dropdown-item" type="button" value="pt" onClick={() => handleLangChange('pt')}>Portuguese</button></li>
-          <li><button href="/#ro"className="dropdown-item" type="button" value="ro" onClick={() => handleLangChange('ro')}>Romanian</button></li>
-          <li><button href="/#ru"className="dropdown-item" type="button" value="ru" onClick={() => handleLangChange('ru')}>Russian</button></li>
-          <li><button href="/#es"className="dropdown-item" type="button" value="es" onClick={() => handleLangChange('es')}>Spanish</button></li>
-          <li><button href="/#sv"className="dropdown-item" type="button" value="sv" onClick={() => handleLangChange('sv')}>Swedish</button></li>
-          <li><button href="/#ta"className="dropdown-item" type="button" value="ta" onClick={() => handleLangChange('ta')}>Tamil</button></li>
-          <li><button href="/#te"className="dropdown-item" type="button" value="te" onClick={() => handleLangChange('te')}>Telugu</button></li>
-          <li><button href="/#uk"className="dropdown-item" type="button" value="uk" onClick={() => handleLangChange('uk')}>Ukrainian</button></li>
+          <li><button className="dropdown-item" type="button" value="ar" onClick={() => handleLangChange('ar')}>Arabic</button></li>
+          <li><button className="dropdown-item" type="button" value="zh" onClick={() => handleLangChange('zh')}>Chinese</button></li>
+          <li><button className="dropdown-item" type="button" value="nl" onClick={() => handleLangChange('nl')}>Dutch</button></li>
+          <li><button className="dropdown-item" type="button" value="en" onClick={() => handleLangChange('en')}>English</button></li>
+          <li><button className="dropdown-item" type="button" value="fr" onClick={() => handleLangChange('fr')}>French</button></li>
+          <li><button className="dropdown-item" type="button" value="de" onClick={() => handleLangChange('de')}>German</button></li>
+          <li><button className="dropdown-item" type="button" value="el" onClick={() => handleLangChange('el')}>Greek</button></li>
+          <li><button className="dropdown-item" type="button" value="he" onClick={() => handleLangChange('he')}>Hebrew</button></li>
+          <li><button className="dropdown-item" type="button" value="hi" onClick={() => handleLangChange('hi')}>Hindi</button></li>
+          <li><button className="dropdown-item" type="button" value="it" onClick={() => handleLangChange('it')}>Italian</button></li>
+          <li><button className="dropdown-item" type="button" value="ja" onClick={() => handleLangChange('ja')}>Japanese</button></li>
+          <li><button className="dropdown-item" type="button" value="ml" onClick={() => handleLangChange('ml')}>Malayalam</button></li>
+          <li><button className="dropdown-item" type="button" value="mr" onClick={() => handleLangChange('mr')}>Marathi</button></li>
+          <li><button className="dropdown-item" type="button" value="no" onClick={() => handleLangChange('no')}>Norwegian</button></li>
+          <li><button className="dropdown-item" type="button" value="pt" onClick={() => handleLangChange('pt')}>Portuguese</button></li>
+          <li><button className="dropdown-item" type="button" value="ro" onClick={() => handleLangChange('ro')}>Romanian</button></li>
+          <li><button className="dropdown-item" type="button" value="ru" onClick={() => handleLangChange('ru')}>Russian</button></li>
+          <li><button className="dropdown-item" type="button" value="es" onClick={() => handleLangChange('es')}>Spanish</button></li>
+          <li><button className="dropdown-item" type="button" value="sv" onClick={() => handleLangChange('sv')}>Swedish</button></li>
+          <li><button className="dropdown-item" type="button" value="ta" onClick={() => handleLangChange('ta')}>Tamil</button></li>
+          <li><button className="dropdown-item" type="button" value="te" onClick={() => handleLangChange('te')}>Telugu</button></li>
+          <li><button className="dropdown-item" type="button" value="uk" onClick={() => handleLangChange('uk')}>Ukrainian</button></li>
         </ul>
       </div>
       
       <div className="dropdown" style={{ marginRight: '20px' }}>
-        <button className="btn btn-secondary bg-danger dropdown-toggle" type="button" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <button className="btn btn-secondary dropdown-toggle" type="button" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
           Country
         </button>
         <ul className="dropdown-menu" aria-labelledby="countryDropdown">
